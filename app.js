@@ -1,8 +1,7 @@
-const board = document.getElementById("easel");
-const ctx = board.getContext("2d");
-
 function main(){
     // console.log("hellooo?");
+    const board = document.getElementById("easel");
+    const ctx = board.getContext("2d");
     // console.log(ctx);
 
     board.setAttribute('width', '800');
@@ -77,17 +76,16 @@ function main(){
     function clearRects (){
         rectanglesArr.length = 0;
     }
+    class Rectangle {
+        constructor(x, y){
+            this.x = x; 
+            this.y = y
+        }
+    };
+    
+    const rectanglesArr = [];
 
 }
-
-class Rectangle {
-    constructor(x, y){
-        this.x = x; 
-        this.y = y
-    }
-};
-
-const rectanglesArr = [];
 
 // if (document.readyState === 'loading'){
 //     document.addEventListener("DOMContentLoaded", main);
